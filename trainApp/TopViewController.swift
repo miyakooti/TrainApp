@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import Kanna
 
-class ViewController: UIViewController {
+class TopViewController: UIViewController {
     
     @IBOutlet weak var debugButton: UIButton!
     
