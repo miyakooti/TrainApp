@@ -15,6 +15,7 @@
 		D1047C442713345500241567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1047C432713345500241567 /* Assets.xcassets */; };
 		D1047C472713345500241567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1047C452713345500241567 /* LaunchScreen.storyboard */; };
 		D1067C3B27187BFF00B71C02 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1067C3A27187BFF00B71C02 /* Secrets.swift */; };
+		D1F31D8A271901C500D959B8 /* TrainSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F31D89271901C500D959B8 /* TrainSearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D1047C462713345500241567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1047C482713345500241567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1067C3A27187BFF00B71C02 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		D1F31D89271901C500D959B8 /* TrainSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +82,18 @@
 				D1047C432713345500241567 /* Assets.xcassets */,
 				D1047C452713345500241567 /* LaunchScreen.storyboard */,
 				D1047C482713345500241567 /* Info.plist */,
+				D1F31D89271901C500D959B8 /* TrainSearchResult.swift */,
 				D1067C3A27187BFF00B71C02 /* Secrets.swift */,
+				D1F31D882719018600D959B8 /* Utilities */,
 			);
 			path = trainApp;
+			sourceTree = "<group>";
+		};
+		D1F31D882719018600D959B8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		D67B9958AAAD31AAE5EA1743 /* Pods */ = {
@@ -211,6 +222,7 @@
 				D1047C3F2713345400241567 /* ViewController.swift in Sources */,
 				D1067C3B27187BFF00B71C02 /* Secrets.swift in Sources */,
 				D1047C3B2713345400241567 /* AppDelegate.swift in Sources */,
+				D1F31D8A271901C500D959B8 /* TrainSearchResult.swift in Sources */,
 				D1047C3D2713345400241567 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
