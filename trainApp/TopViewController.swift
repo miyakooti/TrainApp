@@ -18,6 +18,11 @@ class TopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         debugButton.addTarget(self, action: #selector(debugButtonPressed(_:)), for: .touchUpInside)
+        print("didload")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("willAppear")
     }
     
     @objc func debugButtonPressed(_ sender: UIButton) {
