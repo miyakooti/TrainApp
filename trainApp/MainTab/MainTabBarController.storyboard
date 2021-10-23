@@ -20,7 +20,7 @@
         <scene sceneID="7I0-oU-4u2">
             <objects>
                 <navigationController id="dmT-YT-vTZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="MyM-CC-ept"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="clock" catalog="system" id="MyM-CC-ept"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mlN-v8-1wZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -36,9 +36,8 @@
         <!--Item-->
         <scene sceneID="7Qu-u5-XGG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sm8-2l-FL1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="T1B-MN-h0C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Sbl-8B-YDg"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="gearshape" catalog="system" id="Sbl-8B-YDg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dxP-Xm-QK1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -47,6 +46,7 @@
                         <segue destination="hkG-gi-0U3" kind="relationship" relationship="rootViewController" id="H2w-rJ-nq2"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sm8-2l-FL1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-833" y="532"/>
         </scene>
@@ -79,4 +79,8 @@
             <point key="canvasLocation" x="-1365" y="-149"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
