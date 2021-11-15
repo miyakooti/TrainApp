@@ -10,7 +10,7 @@
 		35B3E8110FD94BA9CF96B0B0 /* Pods_trainApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCA6F8EB4CED7095010416E /* Pods_trainApp.framework */; };
 		D1047C3B2713345400241567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1047C3A2713345400241567 /* AppDelegate.swift */; };
 		D1047C3D2713345400241567 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1047C3C2713345400241567 /* SceneDelegate.swift */; };
-		D1047C3F2713345400241567 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1047C3E2713345400241567 /* TopViewController.swift */; };
+		D1047C3F2713345400241567 /* SearchTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1047C3E2713345400241567 /* SearchTimeViewController.swift */; };
 		D1047C422713345400241567 /* TopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1047C402713345400241567 /* TopViewController.storyboard */; };
 		D1047C442713345500241567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1047C432713345500241567 /* Assets.xcassets */; };
 		D1047C472713345500241567 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1047C452713345500241567 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,8 @@
 		D1A5DA4B2719FB0A00A8B999 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A5DA4A2719FB0A00A8B999 /* SettingViewController.storyboard */; };
 		D1A5DA4D2719FB3500A8B999 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5DA4C2719FB3500A8B999 /* MainTabBarController.swift */; };
 		D1A5DA4F2719FB6600A8B999 /* MainTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A5DA4E2719FB6600A8B999 /* MainTabBarController.storyboard */; };
+		D1B8B3AC27421EE4005DAB19 /* SearchTimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8B3AB27421EE4005DAB19 /* SearchTimePresenter.swift */; };
+		D1B8B3AE27421EF0005DAB19 /* SearchTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B8B3AD27421EF0005DAB19 /* SearchTimeModel.swift */; };
 		D1F31D8A271901C500D959B8 /* TrainSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F31D89271901C500D959B8 /* TrainSearchResult.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +31,7 @@
 		D1047C372713345400241567 /* trainApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trainApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1047C3A2713345400241567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1047C3C2713345400241567 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D1047C3E2713345400241567 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		D1047C3E2713345400241567 /* SearchTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTimeViewController.swift; sourceTree = "<group>"; };
 		D1047C412713345400241567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TopViewController.storyboard; sourceTree = "<group>"; };
 		D1047C432713345500241567 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1047C462713345500241567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +41,8 @@
 		D1A5DA4A2719FB0A00A8B999 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
 		D1A5DA4C2719FB3500A8B999 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		D1A5DA4E2719FB6600A8B999 /* MainTabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBarController.storyboard; sourceTree = "<group>"; };
+		D1B8B3AB27421EE4005DAB19 /* SearchTimePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTimePresenter.swift; sourceTree = "<group>"; };
+		D1B8B3AD27421EF0005DAB19 /* SearchTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTimeModel.swift; sourceTree = "<group>"; };
 		D1F31D89271901C500D959B8 /* TrainSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainSearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,8 +123,10 @@
 		D1D4C0682719F0F900E57523 /* Top */ = {
 			isa = PBXGroup;
 			children = (
-				D1047C3E2713345400241567 /* TopViewController.swift */,
 				D1047C402713345400241567 /* TopViewController.storyboard */,
+				D1047C3E2713345400241567 /* SearchTimeViewController.swift */,
+				D1B8B3AB27421EE4005DAB19 /* SearchTimePresenter.swift */,
+				D1B8B3AD27421EF0005DAB19 /* SearchTimeModel.swift */,
 			);
 			name = Top;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1047C3F2713345400241567 /* TopViewController.swift in Sources */,
+				D1B8B3AC27421EE4005DAB19 /* SearchTimePresenter.swift in Sources */,
+				D1B8B3AE27421EF0005DAB19 /* SearchTimeModel.swift in Sources */,
+				D1047C3F2713345400241567 /* SearchTimeViewController.swift in Sources */,
 				D1067C3B27187BFF00B71C02 /* Secrets.swift in Sources */,
 				D1047C3B2713345400241567 /* AppDelegate.swift in Sources */,
 				D1A5DA4D2719FB3500A8B999 /* MainTabBarController.swift in Sources */,

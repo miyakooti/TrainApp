@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 import Kanna
 
-class TopViewController: UIViewController {
+class SearchTimeViewController: UIViewController {
     
     @IBOutlet weak var debugButton: UIButton!
     
