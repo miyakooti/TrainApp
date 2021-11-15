@@ -18,11 +18,9 @@ class TopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         debugButton.addTarget(self, action: #selector(debugButtonPressed(_:)), for: .touchUpInside)
-        print("didload")
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("willAppear")
     }
     
     @objc func debugButtonPressed(_ sender: UIButton) {
@@ -44,6 +42,7 @@ class TopViewController: UIViewController {
                 do {
                     let result = try jsonDecoder.decode(TrainSearchResult.self, from: data)
                     guard let resourceURI = result.ResultSet.ResourceURI else { return }
+                    print(resourceURI)
                     self.fetchTrainDataFromUrl(resourceURI)
                 } catch {
                     print(error)
