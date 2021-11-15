@@ -23,6 +23,9 @@ class TopViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
     }
     
+    // 検知するのはviewの役割
+    //　中のAPIの処理はmodelの役割
+    // そしてそのviewのアクションととmodelの処理をつなげるのがpresenterの役割
     @objc func debugButtonPressed(_ sender: UIButton) {
         
         let baseUrl = "https://api.ekispert.jp/v1/"
@@ -65,7 +68,6 @@ class TopViewController: UIViewController {
                     for value in doc.xpath("//span[@class='dep_date']") {
                         print(value.text)
                     }
-                    
 
                 }
             case let .failure(error):
