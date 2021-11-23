@@ -55,14 +55,17 @@ class TopViewController: UIViewController {
     
     func fetchTrainDataFromUrl(_ url: String) {
                 
+        print("url", url)
         AF.request(url).responseString { response in
 
             switch response.result {
             case let .success(value):
 
                 if let doc = try? HTML(html: value, encoding: .utf8) {
+                    print("htmlへの変換ができました。")
                     
-                    for value in doc.xpath("//span[@class='dep_date']") {
+                    for value in doc.xpath("//p[@class='candidate_list_txt']") {
+                        print("該当の要素が見つかりました。")
                         print(value.text)
                     }
                     
