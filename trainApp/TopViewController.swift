@@ -13,7 +13,7 @@ class TopViewController: UIViewController {
     
     @IBOutlet weak var debugButton: UIButton!
     
-    var departDate = ""
+    var departDate: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,12 +62,13 @@ class TopViewController: UIViewController {
             case let .success(value):
 
                 if let doc = try? HTML(html: value, encoding: .utf8) {
-                    print("htmlへの変換ができました。")
                     
-                    for value in doc.xpath("//p[@class='candidate_list_txt']") {
-                        print("該当の要素が見つかりました。")
-                        print(value.text)
-                    }
+//                    for value in doc.xpath("//p[@class='candidate_list_txt']") {
+//                        print(value[0].)
+//                    }
+                    print(doc.xpath("//p[@class='candidate_list_txt']").first?.text)
+                    self.departDate = String(doc.xpath("//p[@class='candidate_list_txt']").first?.text?.prefix(5) ?? "")
+                    print(self.departDate)
                     
 
                 }
