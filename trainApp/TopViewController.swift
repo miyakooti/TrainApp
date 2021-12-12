@@ -12,8 +12,8 @@ import Kanna
 class TopViewController: UIViewController {
     
     @IBOutlet weak var debugButton: UIButton!
-    
-    var departDate: String?
+    @IBOutlet weak var leftTimeLabel: UILabel!
+    @IBOutlet weak var departTimeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,22 +55,14 @@ class TopViewController: UIViewController {
     
     func fetchTrainDataFromUrl(_ url: String) {
                 
-        print("url", url)
-        AF.request(url).responseString { response in
-
+        AF.request(url).responseString { [weak self] response in
             switch response.result {
             case let .success(value):
-
                 if let doc = try? HTML(html: value, encoding: .utf8) {
-                    
-//                    for value in doc.xpath("//p[@class='candidate_list_txt']") {
-//                        print(value[0].)
-//                    }
-                    print(doc.xpath("//p[@class='candidate_list_txt']").first?.text)
-                    self.departDate = String(doc.xpath("//p[@class='candidate_list_txt']").first?.text?.prefix(5) ?? "")
-                    print(self.departDate)
-                    
-
+                    let departTime = String(doc.xpath("//p[@class='candidate_list_txt']").first?.text?.prefix(5) ?? "")
+                    DispatchQueue.main.async {
+                        self?.handleTrainData(departTime: departTime)
+                    }
                 }
             case let .failure(error):
                 print(error)
@@ -78,6 +70,39 @@ class TopViewController: UIViewController {
         }
         
     }
+    
+    func handleTrainData(departTime: String) {
+        print("handleTrainDataしてるよーん")
+        departTimeLabel.text = "\(departTime)発"
+        print(departTime)
+        print(departTime.prefix(2))
+        print(departTime.suffix(2))
+        
+        guard let trainHour = Int(departTime.prefix(2)) else {return}
+        print("あああ")
+        guard let trainMinute = Int(departTime.suffix(2)) else {return}
+
+        
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "HH:mm", options: 0, locale: Locale(identifier: "ja_JP"))
+        
+        guard let nowHour = Int(dateFormatter.string(from: now).prefix(2)),
+              let nowMinute = Int(dateFormatter.string(from: now).suffix(2)) else {return}
+        
+        let leftTime = (trainHour - nowHour) * 60 + trainMinute - nowMinute
+        
+        print(leftTime)
+        
+        leftTimeLabel.text = String(leftTime)
+        
+        
+
+        
+
+        
+    }
+    
 
 
 }
