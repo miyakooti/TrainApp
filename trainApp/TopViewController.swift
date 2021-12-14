@@ -72,16 +72,10 @@ class TopViewController: UIViewController {
     }
     
     func handleTrainData(departTime: String) {
-        print("handleTrainDataしてるよーん")
         departTimeLabel.text = "\(departTime)発"
-        print(departTime)
-        print(departTime.prefix(2))
-        print(departTime.suffix(2))
         
         guard let trainHour = Int(departTime.prefix(2)) else {return}
-        print("あああ")
         guard let trainMinute = Int(departTime.suffix(2)) else {return}
-
         
         let now = Date()
         let dateFormatter = DateFormatter()
@@ -90,11 +84,18 @@ class TopViewController: UIViewController {
         guard let nowHour = Int(dateFormatter.string(from: now).prefix(2)),
               let nowMinute = Int(dateFormatter.string(from: now).suffix(2)) else {return}
         
-        let leftTime = (trainHour - nowHour) * 60 + trainMinute - nowMinute
+        print(trainHour)
+        print(trainMinute)
+        print(nowHour)
+        print(nowMinute)
         
-        print(leftTime)
+        if trainHour - nowHour > 1 {
+            leftTimeLabel.text = "1時間以上"
+        }
         
-        leftTimeLabel.text = String(leftTime)
+        let leftTime = trainMinute - nowMinute
+        
+        leftTimeLabel.text = "\(leftTime - 1)分0秒"
         
         
 
