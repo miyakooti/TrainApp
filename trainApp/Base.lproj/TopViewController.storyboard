@@ -70,6 +70,8 @@
                     </view>
                     <connections>
                         <outlet property="debugButton" destination="Z52-Kg-GMG" id="9WJ-TA-mTs"/>
+                        <outlet property="departTimeLabel" destination="6Yo-OD-d4a" id="bLr-cg-Taq"/>
+                        <outlet property="leftTimeLabel" destination="IwU-Im-MeS" id="SvX-NX-HHp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
